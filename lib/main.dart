@@ -34,7 +34,8 @@ class MainApp extends StatelessWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
      // themeMode: ThemeMode.system,
-      home: OnboardingScreen(),
+      home: //AuthenticationScreen()
+      OnboardingScreen(),
     );
   }
 }

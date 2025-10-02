@@ -3,6 +3,7 @@ import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import '../../authentication/screen/authentication_screen.dart';
 // import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 // import '../../theme/app_color.dart';
+import '../../common/widget/button_widget.dart';
 import '../../theme/app_color.dart';
 import '../controller/onboarding_controller.dart';
 
@@ -83,9 +84,8 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             Row(spacing: 50,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-              ElevatedButton(
-                //Go to Signup Screen
-                onPressed: () {
+                ButtonWidget(type:"onboard",
+                   onPressed:  () {
                   if(controllerObj.currentPage != controllerObj.items.length-1)
                   {
                     controllerObj.controller.nextPage(
@@ -95,15 +95,36 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   else{
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute<void>(builder: (context) => AuthenticationScreen()),
+                      MaterialPageRoute<void>(builder: (context) => AuthenticationScreen())
                     );
-                  }
+                  }}
+                  ,
+                  child: controllerObj.currentPage != controllerObj.items.length-1 ?
+                  Text("التالي"):
+                  Text("حياك")
+                  ),
+              // ElevatedButton(
+              //   //Go to Signup Screen
+              //   onPressed: () {
+              //     if(controllerObj.currentPage != controllerObj.items.length-1)
+              //     {
+              //       controllerObj.controller.nextPage(
+              //           duration:
+              //           Duration(seconds: 1), curve: Curves.linear);
+              //     }
+              //     else{
+              //       Navigator.pushReplacement(
+              //         context,
+              //         MaterialPageRoute<void>(builder: (context) => AuthenticationScreen()),
+              //       );
+              //     }
+              //
+              //   },
+              //   child: controllerObj.currentPage != controllerObj.items.length-1 ?
+              //   Text("التالي"):
+              //   Text("حياك"),
+              // ),
 
-                },
-                child: controllerObj.currentPage != controllerObj.items.length-1 ?
-                Text("التالي"):
-                Text("حياك"),
-              ),
                 controllerObj.currentPage != controllerObj.items.length-1 ?
                 TextButton(
                 //Go to Signup Screen
