@@ -17,6 +17,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
     return Scaffold(
     body:
       Column(children: [
+        Text("Authkdjhcksdjhkd",style: TextStyle(color: Colors.black),),
         Form(child:
         TextFormField()
         ),
