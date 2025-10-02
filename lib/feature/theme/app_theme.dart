@@ -6,7 +6,7 @@ import 'package:roshan/feature/theme/app_color.dart';
 ThemeData lightTheme = ThemeData(
   brightness: Brightness.light,
   scaffoldBackgroundColor: AppColor.lightWhiteColor,
-  //fontFamily: 'JosefinSans',
+  fontFamily:  'NotoSansArabic',
   appBarTheme: AppBarTheme(
     backgroundColor: AppColor.lightWhiteColor,
     titleTextStyle: TextStyle(color: Colors.white, fontSize: 18),
@@ -14,9 +14,9 @@ ThemeData lightTheme = ThemeData(
   textTheme: TextTheme(
     bodyLarge: TextStyle(color: Colors.black),
     displayMedium:   TextStyle(fontSize: 30,
-        fontWeight: FontWeight.w700,
-    fontFamily: 'JosefinSans'),
-    bodyMedium: TextStyle(fontSize: 18),
+        fontWeight: FontWeight.bold,
+    fontFamily: 'NotoSansArabic'),
+    bodyMedium: TextStyle(fontSize: 18,height: 2.0, ),
     bodySmall: TextStyle(
       color: AppColor.purpleColor,
       fontSize: 20,

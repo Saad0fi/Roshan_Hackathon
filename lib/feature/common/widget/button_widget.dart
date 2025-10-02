@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ButtonWidget extends StatelessWidget {
-  final Function() onPressed;
+  final Function()? onPressed;
   final String type;
   final Widget child;
 
