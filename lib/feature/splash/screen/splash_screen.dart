@@ -1,5 +1,4 @@
 
-import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:roshan/feature/onboarding/screen/onboarding_screen.dart';
 // import 'package:animated_splashscreen/animated_splashscreen.dart'; // or flutter_animated_splash
