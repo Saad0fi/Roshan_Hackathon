@@ -15,6 +15,8 @@ dependencies:
   google_fonts: ^6.3.2
   country_picker: ^2.0.27
   phone_form_field: ^10.0.11+13
+  pin_code_text_field: ^1.8.0
+  pin_code_fields: ^8.0.1
 
 dev_dependencies:
   flutter_test:
