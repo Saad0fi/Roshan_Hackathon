@@ -12,11 +12,13 @@ ThemeData lightTheme = ThemeData(
     titleTextStyle: TextStyle(color: Colors.white, fontSize: 18),
   ),
   textTheme: TextTheme(
+    titleLarge: TextStyle(fontWeight: FontWeight.w400,fontSize: 44,
+    fontFamily: 'Lalezar'),
     bodyLarge: TextStyle(color: Colors.black),
     displayMedium:   TextStyle(fontSize: 30,
         fontWeight: FontWeight.bold,
     fontFamily: 'NotoSansArabic'),
-    bodyMedium: TextStyle(fontSize: 18,height: 2.0, ),
+    bodyMedium: TextStyle(fontSize: 18,height: 2.0, fontWeight: FontWeight.bold ),
     bodySmall: TextStyle(
       color: AppColor.purpleColor,
       fontSize: 20,
