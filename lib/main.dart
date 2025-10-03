@@ -5,6 +5,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:roshan/feature/splash/screen/splash_screen.dart';
 import 'package:roshan/feature/otp/screens/otp_screen.dart';
 
+import 'feature/chats/screen/chats_screen.dart';
 import 'feature/navigation/screen/navigation_screen.dart';
 import 'feature/theme/app_theme.dart';
 
@@ -37,7 +38,8 @@ class MainApp extends StatelessWidget {
       theme: lightTheme,
       darkTheme: darkTheme,
      // themeMode: ThemeMode.system,
-      home: AuthenticationScreen()
+      home:NavigationScreen()
+     //AuthenticationScreen()
       //OnboardingScreen(),
     );
   }
