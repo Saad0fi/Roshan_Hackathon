@@ -45,7 +45,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
 
     _animation = Tween<double>(
       begin: 0,
-      end: 8,
+      end: 10,
     ).animate(CurvedAnimation(
       parent: _stretchController,
       curve: Curves.easeOut,
@@ -59,14 +59,14 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
     _controller.forward();
 
 
-    WidgetsBinding.instance.addPostFrameCallback((_) {
-      Future.delayed(const Duration(seconds: 4), () async {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(builder: (context) => OnboardingScreen()),
-        );
-      });
-    });
+    // WidgetsBinding.instance.addPostFrameCallback((_) {
+    //   Future.delayed(const Duration(seconds: 4), () async {
+    //     Navigator.pushReplacement(
+    //       context,
+    //       MaterialPageRoute(builder: (context) => OnboardingScreen()),
+    //     );
+    //   });
+    // });
   }
 
   @override
@@ -92,7 +92,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
             AnimatedBuilder(
                 animation: _animation,
                 builder: (context,child) {
-                  int stretchCount = (_animation.value ).round(); // adjust divisor to control speed
+                  int stretchCount = (_animation.value).round(); // adjust divisor to control speed
                  print(_animation.value);
                   String stretch = 'ـ' * stretchCount;
                   return Text(
