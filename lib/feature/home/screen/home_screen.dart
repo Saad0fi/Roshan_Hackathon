@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:roshan/feature/explore/screens/explore_screen.dart';
 import 'package:roshan/feature/home/screen/story_screen.dart';
 import 'package:roshan/feature/home/widget/story_avatar.dart';
+import 'package:roshan/feature/leaderboard/screen/leaderboard_screen.dart';
 
 import '../../common/widget/button_widget.dart';
 import '../widget/home_widget.dart';
@@ -228,7 +229,13 @@ class HomeScreen extends StatelessWidget {
                             SizedBox(height: 20),
                             ButtonWidget(
                               type: "winner",
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (context) => LeaderboardScreen(),
+                                  ),
+                                );
+                              },
                               child: Text(
                                 "المتصدرين",
                                 style: TextStyle(
