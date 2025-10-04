@@ -13,58 +13,71 @@ class ChatsScreen extends StatelessWidget {
         child:
       Scaffold(
       appBar: AppBar(
-         leading: Padding(
-           padding: const EdgeInsets.all(20),
-           child: Icon(Icons.more_vert_rounded),
-         ),
-      title: Center(child: Text("لمة حيّك",style: TextStyle(color: Colors.black),)),
-        actions: [Icon(Icons.arrow_forward_ios),],
-actionsPadding: EdgeInsets.all(20),
+         // leading: Padding(
+         //   padding: const EdgeInsets.all(20),
+         //   child: Icon(Icons.more_vert_rounded),
+         // ),
+        centerTitle: true,
+      title: Text("سولف",
+        style: TextTheme.of(context).titleMedium,
+        ),
+        actions: [Icon(Icons.settings,),],
+actionsPadding: EdgeInsets.only(left: 26),
 
       ),
       body: SafeArea(child:
       Padding(
-        padding: const EdgeInsets.all(20.0),
+        padding: const EdgeInsets.all(26.0),
         child: Column(children: [
+          /// Serach bar
           SearchBar(
-            trailing: <Widget>[
+            leading:
               const Padding(
-                padding:  EdgeInsets.only(left: 10),
-                child: Image(image: AssetImage("assets/images/Search.png")),
+                padding:  EdgeInsets.only(right: 10),
+                child:
+          Image(image: AssetImage("assets/images/Vector (19).png")),
               ),
-            ],
-            elevation: WidgetStateProperty.all(0.0),
-            hintText:
-              "ابحث عن محادثة..",
-             // style: TextTheme.of(context).bodySmall,
-            backgroundColor: WidgetStatePropertyAll(AppColor.lightWhiteColor),
-            shape: WidgetStatePropertyAll<OutlinedBorder>(
-              RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(16),
-                side: BorderSide(color: Color(0xffEAEAF5), width: 1),
-              ),
-            ),
-
+            hintText: "ابحث عن محادثة..",
           ),
           SizedBox(height: 20,),
-          ChatsWidget(image:"assets/images/Image.png",name:"كريم",msg:"هلا",
-          num:"3"),
+          /// New Messages 
+          Row(spacing: 10,
+            children: [
+              Stack(clipBehavior: Clip.none,
+                  children: [
+                    Image(image: AssetImage("assets/images/Ellipse 19.png")),
+                    Positioned(
+                        top: -2,
+                        child: Image(image: AssetImage("assets/images/Ellipse 129 (1).png")),
+                    ),
+                    Positioned(right: 9,
+                        top: 10,
+                        child:
+                    Image(image: AssetImage("assets/images/fluent_chat-24-regular (1).png"))),
+            // Container(
+            //   padding: EdgeInsets.all(10),
+            //   decoration: BoxDecoration(
+            //     border: Border.all(
+            //       color: Color(0xff7879796E)
+            //     ),
+            //     borderRadius: BorderRadius.circular(50)
+            //   ),
+            //   child: Image(image: AssetImage("assets/images/fluent_chat-24-regular (1).png")),
+            // ),
+            ]),
+            Text("رسائل جديدة"),
+          ],),
+          SizedBox(height: 20,),
+          ChatsWidget(image:"assets/images/Image.png",name:"ابو خالد",msg:"هلا",
+          total:"3",time: "الان"),
           Divider(color: Color(0xff20222C00),
           ),
-          ChatsWidget(image:"assets/images/Image (1).png",name:"راشد",msg:"تمام باي",
-              num:"1"),
+          ChatsWidget(image:"assets/images/Image (1).png",name:"كريم",msg:"تمام باي",
+              total:"1",time: "5 دقائق"),
           Divider(color: Color(0xff20222C00),),
-          ChatsWidget(image:"assets/images/Image (2).png",name:"رائد",msg:"تقدر تتكفل بالهشيء",
-              num:"2"),
-          Divider(color: Color(0xff20222C00),),
-          ChatsWidget(image:"assets/images/Image (3).png",name:"نورة",
-              msg:"ياسلام ، متحمس له جداً!",
-              num:"3"),
-          Divider(color: Color(0xff20222C00),),
-          ChatsWidget(image:"assets/images/Image (4).png",name:"باسم",
-              msg:"ارحب",
-              num:"4"),
-          Divider(color: Color(0xff20222C00),),
+          ChatsWidget(image:"assets/images/Image (2).png",name:"محمد خالد",msg:"اكيددد ان شاءالله",
+              total:"2",time: "1 ساعة"),
+
         ],),
       )),
     )

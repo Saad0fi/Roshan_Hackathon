@@ -16,55 +16,100 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Directionality(
       textDirection: TextDirection.rtl,
-      child: SafeArea(
-        child: Scaffold(
+      child: Scaffold(
           appBar: AppBar(
-            actionsPadding: EdgeInsets.only(left: 19),
-            actions: [
-              Container(
-                padding: EdgeInsets.all(5),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(20),
-                  color: Color(0xff000000).withOpacity(0.2),
-                ),
-
-                child: Image(
-                  image: AssetImage("assets/images/solar_bell-bold.png"),
-                ),
+              surfaceTintColor: Colors.transparent,
+              actionsPadding: EdgeInsets.only(left: 19),
+          actions: [
+            Container(
+              padding: EdgeInsets.all(5),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(20),
+                color: Color(0xff000000).withOpacity(0.2),
               ),
-            ],
-            // leading: Text("موقعك الحالي"),
-            title: Padding(
-              padding: EdgeInsets.only(right: 19),
-              child: Column(
-                children: [
-                  Align(
-                    alignment: Alignment.centerRight,
-                    child: Text(
-                      "موقعك الحالي",
-                      style: TextStyle(color: Colors.black),
-                    ),
-                  ),
-                  Row(
-                    spacing: 5,
-                    children: [
-                      Image(image: AssetImage("assets/images/Group (5).png")),
-                      Text(
-                        "قرطبة ، الرياض",
-                        style: TextStyle(color: Colors.black),
-                      ),
-                      Icon(Icons.keyboard_arrow_down_outlined),
-                    ],
-                  ),
-                ],
+
+              child: Image(
+                image: AssetImage("assets/images/solar_bell-bold (1).png"),
               ),
             ),
-          ),
-          body: DefaultTabController(
-            length: 2,
+          ],
+          // leading: Text("موقعك الحالي"),
+          title: Padding(
+            padding: EdgeInsets.only(right: 19),
             child: Column(
               children: [
-                SizedBox(height: 20),
+                Align(
+                  alignment: Alignment.centerRight,
+                  child: Text(
+                    "موقعك الحالي",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ),
+                Row(
+                  spacing: 5,
+                  children: [
+                    Image(image: AssetImage("assets/images/Group (5).png")),
+                    Text(
+                      "قرطبة ، الرياض",
+                      style: TextStyle(color: Colors.black),
+                    ),
+                    Icon(Icons.keyboard_arrow_down_outlined),
+                  ],
+                ),
+              ],
+            ),
+          ),
+        ),
+        body: DefaultTabController(
+          length: 2,
+          child: Column(
+            children: [
+              SizedBox(height: 20),
+// >>>>>>> chats
+//               Container(
+//                 padding: EdgeInsets.all(5),
+//                 decoration: BoxDecoration(
+//                   borderRadius: BorderRadius.circular(20),
+//                   color: Color(0xff000000).withOpacity(0.2),
+//                 ),
+//
+//                 child: Image(
+//                   image: AssetImage("assets/images/solar_bell-bold.png"),
+//                 ),
+//               ),
+//             ],
+//             // leading: Text("موقعك الحالي"),
+//             title: Padding(
+//               padding: EdgeInsets.only(right: 19),
+//               child: Column(
+//                 children: [
+//                   Align(
+//                     alignment: Alignment.centerRight,
+//                     child: Text(
+//                       "موقعك الحالي",
+//                       style: TextStyle(color: Colors.black),
+//                     ),
+//                   ),
+//                   Row(
+//                     spacing: 5,
+//                     children: [
+//                       Image(image: AssetImage("assets/images/Group (5).png")),
+//                       Text(
+//                         "قرطبة ، الرياض",
+//                         style: TextStyle(color: Colors.black),
+//                       ),
+//                       Icon(Icons.keyboard_arrow_down_outlined),
+//                     ],
+//                   ),
+//                 ],
+//               ),
+//             ),
+//           ),
+//           body: DefaultTabController(
+//             length: 2,
+//             child: Column(
+//               children: [
+//                 SizedBox(height: 20),
                 Container(
                   width: double.infinity,
                   padding: EdgeInsets.only(right: 20),
@@ -284,7 +329,7 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
           ),
-        ),
+        // ),
       ),
     );
   }

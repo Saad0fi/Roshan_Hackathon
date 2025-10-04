@@ -10,10 +10,14 @@ ThemeData lightTheme = ThemeData(
   appBarTheme: AppBarTheme(
     backgroundColor: AppColor.lightWhiteColor,
     titleTextStyle: TextStyle(color: Colors.white, fontSize: 18),
+    iconTheme: IconThemeData(
+        color: Colors.black
+    ),
   ),
   textTheme: TextTheme(
     titleLarge: TextStyle(fontWeight: FontWeight.w400,fontSize: 44,
     fontFamily: 'Lalezar'),
+    titleMedium: TextStyle(fontSize: 20, fontWeight: FontWeight.w600),
     bodyLarge: TextStyle(color: Colors.black),
     displayMedium:   TextStyle(fontSize: 30,
         fontWeight: FontWeight.bold,
@@ -43,6 +47,24 @@ ThemeData lightTheme = ThemeData(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
     ),
   ),
+  searchBarTheme: SearchBarThemeData(
+    elevation: WidgetStateProperty.all(0.0),
+    hintStyle: WidgetStatePropertyAll<TextStyle>(
+        TextStyle(
+          color:  Color(0x661E1E2C),
+          fontSize: 14,
+          fontFamily: 'Noto Sans Arabic',
+          fontWeight: FontWeight.w400,
+          height: 2.14,
+        )
+    ),
+    backgroundColor: WidgetStatePropertyAll( Color(0x191E1E2C),),
+    shape: WidgetStatePropertyAll<OutlinedBorder>(
+      RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(15),
+      ),
+    ),
+  )
 );
 
 /// Dark Mode
