@@ -1,8 +1,5 @@
 
 import 'package:flutter/material.dart';
-import 'package:roshan/feature/onboarding/screen/onboarding_screen.dart';
-// import 'package:animated_splashscreen/animated_splashscreen.dart'; // or flutter_animated_splash
-
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -28,8 +25,6 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
 
 
         _slideAnimation=  Tween<Offset>(
-          // begin: Offset(0, 1),   // Off-screen at bottom
-          // end: Offset(0, 0),     // In position
           begin: Offset(0, -0.5), // 👈 from top of screen
           end: Offset(0, 0),
         ).animate(CurvedAnimation(
@@ -47,22 +42,14 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
 
     _animation = Tween<double>(
       begin: 0,
-      end: 40,
+      end: 8,
     ).animate(CurvedAnimation(
       parent: _stretchController,
       curve: Curves.easeOut,
     ));
 
-
-    // _animation = Tween<double>(
-    //     begin: 0, end: 40
-    // ).animate(
-    //   CurvedAnimation(parent: _controller, curve: Curves.easeOut),
-    // );
-
-
     // Delay starting the stretch animation until slide finishes
-    Future.delayed(Duration(seconds: 2), () {
+    Future.delayed(Duration(seconds: 1), () {
       _stretchController.forward();
     });
 
@@ -84,25 +71,16 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
       Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          // Stack(clipBehavior: Clip.none,
-          //   children: [
       Image(
           image: AssetImage("assets/images/image 6.png")),
-      //     SlideTransition(
-      //       position: _slideAnimation,
-      //       child:
-      //       Image(
-      //           image: AssetImage("assets/images/image 6.png"))
-      //     ),
-      //     Positioned(right: 50, bottom: -50,
-      //       child:
             SlideTransition(
                 position: _slideAnimation,
             child:
             AnimatedBuilder(
                 animation: _animation,
                 builder: (context,child) {
-                  int stretchCount = (_animation.value / 5).round(); // adjust divisor to control speed
+                  int stretchCount = (_animation.value ).round(); // adjust divisor to control speed
+                 print(_animation.value);
                   String stretch = 'ـ' * stretchCount;
                   return Text(
                     'حيّ${stretch}ك',
@@ -113,10 +91,6 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
                 }
             )
             ),
-
-
-       //   )
-      //  ],)
           ]  )
           )),
       );

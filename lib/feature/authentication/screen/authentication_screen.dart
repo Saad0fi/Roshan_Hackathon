@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:phone_form_field/phone_form_field.dart';
 
 import '../../common/widget/button_widget.dart';
+import '../../otp/screens/otp_screen.dart';
 
 class AuthenticationScreen extends StatefulWidget {
   const AuthenticationScreen({super.key});
@@ -131,7 +132,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute<void>(
-                            builder: (context) => AuthenticationScreen(),
+                            builder: (context) => OTPScreen(),
                           ),
                         );}
                       }
