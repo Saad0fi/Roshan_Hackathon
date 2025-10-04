@@ -4,8 +4,10 @@ import 'package:roshan/feature/theme/app_color.dart';
 import '../screen/specific_chat_screen.dart';
 
 class ChatsWidget extends StatelessWidget {
-  final String name,msg,num,image;
-  const ChatsWidget({super.key, required this.name, required this.msg, required this.num, required this.image});
+  final String name,msg,total,image,time;
+  const ChatsWidget({super.key, required this.name, required this.msg,
+    required this.total, required this.image,
+   required this.time});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,11 @@ class ChatsWidget extends StatelessWidget {
       );
     },
       child: ListTile(
-      leading: Image(image: AssetImage(image)),
+        contentPadding: EdgeInsets.zero, // removes outer padding
+      //  visualDensity: VisualDensity.compact, // optional: tightens vertical space
+      //  minLeadingWidth: 0,
+        minVerticalPadding: 0.0,
+        leading: Image(image: AssetImage(image)),
         title: Text(name),
         subtitle: Padding(
           padding: const EdgeInsets.only(top:15.0),
@@ -27,11 +33,12 @@ class ChatsWidget extends StatelessWidget {
         subtitleTextStyle: TextStyle(fontSize: 14,color: Color(0xff20222C)),
         trailing: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          crossAxisAlignment: CrossAxisAlignment.end,
           children: [
-            Text("الان"),
+            Text(time,style: TextStyle(color:  Color(0xFF1E1E2C).withOpacity(0.3)),),
             CircleAvatar(radius: 10,
-                backgroundColor: AppColor.purpleColor,
-              child: Text(num,style: TextStyle(color: Colors.white
+                backgroundColor: AppColor.greenColor,
+              child: Text(total,style: TextStyle(color: Colors.white
               ,fontSize: 10),),)
           ],
         ),

@@ -15,8 +15,9 @@ class HomeScreen extends StatelessWidget {
     return Directionality(
       textDirection: TextDirection.rtl,
       child: Scaffold(
-        appBar: AppBar(
-          actionsPadding: EdgeInsets.only(left: 19),
+          appBar: AppBar(
+              surfaceTintColor: Colors.transparent,
+              actionsPadding: EdgeInsets.only(left: 19),
           actions: [
             Container(
               padding: EdgeInsets.all(5),

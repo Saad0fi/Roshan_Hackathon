@@ -19,33 +19,36 @@ class SpecificChatScreen extends StatelessWidget {
       child: Scaffold(
         appBar: AppBar(
           automaticallyImplyLeading: false,
-          backgroundColor: Colors.white,
+          backgroundColor: Color(0xffDBDBDD),
           titleSpacing: 0,
+          toolbarHeight: 100,
+leading:   InkWell(onTap: (){
+  Navigator.pop(context);
+
+},
+    child: Icon(Icons.arrow_back_ios, color:
+    Colors.black)),
+          centerTitle: true,
           title: Padding(
             padding: const EdgeInsets.all(20.0),
-            child: Row(
+            child:
+            Column(
               // mainAxisAlignment: MainAxisAlignment.start,
               children: [
-                InkWell(onTap: (){
-                  // Navigator.pushReplacement(
-                  //   context,
-                  //   MaterialPageRoute<void>(
-                  //     builder: (context) => NavigationScreen(),
-                  //   ),
-                  // );
-               //   Navigator.pushReplacement(context, '/ChatScreen');
-                  Navigator.pop(context);
-
-                },
-                    child: Icon(Icons.arrow_back_ios, color: Color(0xff63646B))),
                 Stack(
                   children: [
-                    Image(image: AssetImage(image)),
+                    Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(50),
+                        border: Border.all(color: Colors.black,
+                        width: 2)
+                      ),
+                        child: ClipOval(child: Image(image: AssetImage(image)))),
                     Positioned(
                       left: 0,
                       bottom: 0,
                       child: Image(
-                        image: AssetImage("assets/images/Ellipse.png"),
+                        image: AssetImage("assets/images/Ellipse (1).png"),
                       ),
                     ),
                   ],
@@ -56,7 +59,8 @@ class SpecificChatScreen extends StatelessWidget {
             ),
           ),
 
-          actions: [Icon(Icons.more_vert_rounded, color: Color(0xff63646B))],
+          actions: [Icon(Icons.more_vert_rounded, color:
+          Colors.black)],
           actionsPadding: EdgeInsets.all(20),
         ),
         body: SafeArea(
@@ -67,7 +71,8 @@ class SpecificChatScreen extends StatelessWidget {
               child: Column(
                 children: [
                   Center(child: Text("اليوم",
-                      style: TextStyle(color: Color(0xff20222C),
+                      style: TextStyle(
+                          color: Color(0xff71717A),
                       fontSize: 10))
                   ),
                   Align(
@@ -83,28 +88,28 @@ class SpecificChatScreen extends StatelessWidget {
           ),
         ),
         bottomSheet:
-            //  floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
             Container(
               height: 107,
-              color: Color(0xffFEFEFE),
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                  topLeft: Radius.circular(20.0),
+                  bottomLeft: Radius.circular(20.0),
+                ),
+                color: Color(0xFF9B9BA3),
+              ),
+
               child: Padding(
                 padding: const EdgeInsets.all(10.0),
-                child: Row(spacing: 5,
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                child: Row(
                   children: [
-                    // Image(image: AssetImage("assets/images/text.png")),
-                    //  SearchBar(
-                    //    backgroundColor: WidgetStatePropertyAll(AppColor.whiteColor),
-                    //    hintText: "اكتب شيء..",
-                    //  ),
-                    Image(image: AssetImage("assets/images/text1.png")),
-              // Row(//spacing: 5,
-              //   crossAxisAlignment: CrossAxisAlignment.start,
-              //   children: [
-                    Image(image: AssetImage("assets/images/Image (5).png")),
-                    Image(image: AssetImage("assets/images/Link.png")),
-                    Image(image: AssetImage("assets/images/Emoji.png")),
+                    Image(image: AssetImage("assets/images/Frame 427318934 (1).png")),
+              //       Image(image: AssetImage("assets/images/text1.png")),
+              // // Row(//spacing: 5,
+              // //   crossAxisAlignment: CrossAxisAlignment.start,
+              // //   children: [
+              //       Image(image: AssetImage("assets/images/Image (5).png")),
+              //       Image(image: AssetImage("assets/images/Link.png")),
+              //       Image(image: AssetImage("assets/images/Emoji.png")),
             //  ]),
                 ],
                 ),
