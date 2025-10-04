@@ -79,7 +79,7 @@ class LandingPage extends StatelessWidget {
                     ButtonWidget(
                       type: "Login",
                       onPressed: () {
-                        Navigator.pushReplacement(
+                        Navigator.push(
                           context,
                           MaterialPageRoute<void>(
                             builder: (context) => AuthenticationScreen(),

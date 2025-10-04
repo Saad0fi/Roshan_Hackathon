@@ -43,9 +43,9 @@ class _MainAppState extends State<MainApp> {
       theme: lightTheme,
       darkTheme: darkTheme,
         home: //NavigationScreen()
-        AuthenticationScreen()
+      //  AuthenticationScreen()
       // MapScreen(),
-       //SplashScreen(),
+       SplashScreen(),
     //  home: NavigationScreen(toggleThemeMode: _toggleThemeMode),
      // themeMode: _themeMode,
     );

@@ -29,10 +29,17 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
           child: Column(
             children: [
               SizedBox(height: 30),
-              Text(
-                "ادخل رقم جوالك",
-                style: TextTheme.of(context).displayMedium,
-              ),
+              Row(spacing: 10,
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                Text(
+                  "ادخل رقم جوالك",
+                  style: TextTheme.of(context).displayMedium,
+                ),
+                InkWell(onTap: () => Navigator.pop(context),
+                    child: Icon(Icons.arrow_forward_ios)),
+              ],),
+
               SizedBox(height: 20),
               Text(
                 "عند إدخالك رقم جوالك ، ستتمكن من تسجيل الدخول و انشاء حساب ",
@@ -124,7 +131,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                 type: "Login",
                 onPressed: () {
                   if (formKey.currentState?.validate() ?? false) {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                       context,
                       MaterialPageRoute<void>(
                         builder: (context) => OTPScreen(),

@@ -165,7 +165,7 @@ class _ExploreScreenState extends State<ExploreScreen>
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
         childAspectRatio: 1.2,
-        crossAxisSpacing: 12,
+        crossAxisSpacing: 4,
         mainAxisSpacing: 12,
       ),
       itemCount: images.length,
