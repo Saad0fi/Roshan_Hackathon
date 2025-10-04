@@ -65,6 +65,7 @@ class HomeScreen extends StatelessWidget {
           child: Column(
             children: [
               SizedBox(height: 20),
+                /// story
                 Container(
                   width: double.infinity,
                   padding: EdgeInsets.only(right: 20),
@@ -128,6 +129,7 @@ class HomeScreen extends StatelessWidget {
                               alignment: Alignment.centerRight,
                               child: Text("نقاطي و تصنيفي"),
                             ),
+                            /// leaderboard
                             SizedBox(height: 15),
                             Column(
                               spacing: 5,
@@ -144,14 +146,10 @@ class HomeScreen extends StatelessWidget {
                                     "normal",
                                   ),
                                 ),
-
-                                // buildLeaderBoards("محمد المسلم","520","2390","first"),
                                 Stack(
                                   clipBehavior: Clip.none,
-                                  // fit: StackFit.passthrough,
                                   children: [
                                     Positioned(
-                                      //  left: 10,
                                       top: -15,
                                       right: 120,
                                       child: Image(
@@ -250,10 +248,9 @@ class HomeScreen extends StatelessWidget {
                                 Text("فعاليات و تحديات قادمه"),
                                 TextButton(
                                   style: TextButton.styleFrom(
-                                    //overlayColor: WidgetStateProperty.all(Colors.transparent),
                                     textStyle: TextStyle(
                                       decoration: TextDecoration.underline,
-                                    ), // This applies the underline
+                                    ),
                                   ),
                                   onPressed: () {},
                                   child: Text("عرض الكل"),
@@ -261,7 +258,7 @@ class HomeScreen extends StatelessWidget {
                               ],
                             ),
 
-                            //tab bar
+                            /// tab bar
                             HomeWidget(),
                             SizedBox(height: 15),
 
