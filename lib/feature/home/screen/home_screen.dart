@@ -24,7 +24,6 @@ class HomeScreen extends StatelessWidget {
 
             child: Image(image: AssetImage("assets/images/solar_bell-bold.png"))),
       ],
-     // leading: Text("موقعك الحالي"),
       title:
           Padding(
             padding: EdgeInsets.only(right: 19) ,

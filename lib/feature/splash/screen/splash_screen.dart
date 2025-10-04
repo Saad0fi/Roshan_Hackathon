@@ -11,8 +11,8 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderStateMixin {
-  late AnimationController _controller;
+class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMixin {
+  late AnimationController _controller,_stretchController;
   late Animation<double> _animation;
   late Animation<Offset> _slideAnimation;
 
@@ -23,24 +23,48 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
 
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 5),
+      duration: Duration(seconds: 1),
     );
 
 
         _slideAnimation=  Tween<Offset>(
           // begin: Offset(0, 1),   // Off-screen at bottom
           // end: Offset(0, 0),     // In position
-          begin: Offset(0, -1), // 👈 from top of screen
+          begin: Offset(0, -0.5), // 👈 from top of screen
           end: Offset(0, 0),
         ).animate(CurvedAnimation(
           parent: _controller,
-          curve: Curves.easeOut,
+          curve: Curves.easeInOut,
         ));
-    _animation = Tween<double>(
-      begin: 0, end: 40
-    ).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeOut),
+
+
+
+    // STRETCH animation controller (1 second, for example)
+    _stretchController = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 1),
     );
+
+    _animation = Tween<double>(
+      begin: 0,
+      end: 40,
+    ).animate(CurvedAnimation(
+      parent: _stretchController,
+      curve: Curves.easeOut,
+    ));
+
+
+    // _animation = Tween<double>(
+    //     begin: 0, end: 40
+    // ).animate(
+    //   CurvedAnimation(parent: _controller, curve: Curves.easeOut),
+    // );
+
+
+    // Delay starting the stretch animation until slide finishes
+    Future.delayed(Duration(seconds: 2), () {
+      _stretchController.forward();
+    });
 
     _controller.forward();
   }
@@ -60,6 +84,8 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          // Stack(clipBehavior: Clip.none,
+          //   children: [
       Image(
           image: AssetImage("assets/images/image 6.png")),
       //     SlideTransition(
@@ -68,24 +94,30 @@ class _SplashScreenState extends State<SplashScreen> with SingleTickerProviderSt
       //       Image(
       //           image: AssetImage("assets/images/image 6.png"))
       //     ),
-          SlideTransition(
-              position: _slideAnimation,
-          child:
-          AnimatedBuilder(
-              animation: _animation,
-              builder: (context,child) {
-              int stretchCount = (_animation.value / 5).round(); // adjust divisor to control speed
-            String stretch = 'ـ' * stretchCount;
+      //     Positioned(right: 50, bottom: -50,
+      //       child:
+            SlideTransition(
+                position: _slideAnimation,
+            child:
+            AnimatedBuilder(
+                animation: _animation,
+                builder: (context,child) {
+                  int stretchCount = (_animation.value / 5).round(); // adjust divisor to control speed
+                  String stretch = 'ـ' * stretchCount;
+                  return Text(
+                    'حيّ${stretch}ك',
+                    style: TextStyle(fontSize: 44,
+                        fontWeight: FontWeight.bold),
+                    textDirection: TextDirection.rtl,
+                  );
+                }
+            )
+            ),
 
-            return Text(
-              'حيّ${stretch}ك',
-              style: TextStyle(fontSize: 44,
-                  fontWeight: FontWeight.bold),
-              textDirection: TextDirection.rtl,
-            );
-              }
-              ))
-        ]  )
+
+       //   )
+      //  ],)
+          ]  )
           )),
       );
   }
