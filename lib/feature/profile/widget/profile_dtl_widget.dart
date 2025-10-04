@@ -8,6 +8,7 @@ class ProfileDtlWidget extends StatelessWidget {
   const ProfileDtlWidget({super.key, required this.image,
     required this.number, required this.title, required this.color});
 
+  /// build profile details score
   @override
   Widget build(BuildContext context) {
     return Column(

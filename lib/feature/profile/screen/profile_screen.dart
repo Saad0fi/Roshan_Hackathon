@@ -1,14 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:roshan/feature/authentication/screen/authentication_screen.dart';
 import 'package:roshan/feature/landing/screens/landing_page.dart';
-
 import '../../theme/app_color.dart';
 import '../widget/profile_dtl_widget.dart';
 import '../widget/profile_widget.dart';
 
 class ProfileScreen extends StatefulWidget {
-  //final Function(ThemeMode)? toggleThemeMode;
-
   const ProfileScreen({super.key});
 
   @override
@@ -54,7 +50,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
               child: Padding(
                 padding: const EdgeInsets.all(20.0),
                 child: Column(
-                  // mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     SizedBox(height: 50),
                     Stack(
@@ -67,9 +62,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             right: 20,
                             bottom: 20,
                           ),
-
-                          // padding: EdgeInsets.all(20),
-                          //height: 234,
                           width: 392,
                           decoration: !isDark
                               ? BoxDecoration(
@@ -104,7 +96,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             children: [
                               SizedBox(height: 10),
                               Text("أنس", style: TextStyle(fontSize: 30)),
-                              // ),
                               Row(
                                 spacing: 5,
                                 mainAxisAlignment: MainAxisAlignment.center,
@@ -175,7 +166,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     SizedBox(height: 10),
                     ProfileWidget(
                       image: "assets/images/star.png",
-                      title: "المفضله",
+                      title: "المفضلة",
                       type: "",
                     ),
                     SizedBox(height: 10),
@@ -197,7 +188,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       style: TextButton.styleFrom(
                         textStyle: TextStyle(
                           decoration: TextDecoration.underline,
-                        ), // This applies the underline
+                        ),
                       ),
                       onPressed: () {
                         Navigator.pushReplacement(
