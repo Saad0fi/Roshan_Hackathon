@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:roshan/feature/onboarding/screen/onboarding_screen.dart';
 
-import '../../landing/screens/landing_page.dart';
-
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
 
@@ -10,8 +8,7 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen>
-    with TickerProviderStateMixin {
+class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMixin {
   late AnimationController _controller, _stretchController;
   late Animation<double> _animation;
   late Animation<Offset> _slideAnimation;
@@ -20,17 +17,18 @@ class _SplashScreenState extends State<SplashScreen>
   void initState() {
     super.initState();
 
+    /// duration for first animation slideAnimation
     _controller = AnimationController(
       vsync: this,
-      duration: Duration(seconds: 1),
+      duration: Duration(seconds: 2),
     );
 
     _slideAnimation = Tween<Offset>(
-      begin: Offset(0, -0.5), // 👈 from top of screen
+      begin: Offset(0, -0.5),
       end: Offset(0, 0),
     ).animate(CurvedAnimation(parent: _controller, curve: Curves.easeInOut));
 
-    // STRETCH animation controller (1 second, for example)
+    /// duration for first animation stretchAnimation
     _stretchController = AnimationController(
       vsync: this,
       duration: Duration(seconds: 1),
@@ -40,13 +38,14 @@ class _SplashScreenState extends State<SplashScreen>
       CurvedAnimation(parent: _stretchController, curve: Curves.easeOut),
     );
 
-    // Delay starting the stretch animation until slide finishes
-    Future.delayed(Duration(seconds: 1), () {
+    /// Delay until the second start
+    Future.delayed(Duration(seconds: 2), () {
       _stretchController.forward();
     });
 
     _controller.forward();
 
+    /// move to onboarding screen
     WidgetsBinding.instance.addPostFrameCallback((_) {
       Future.delayed(const Duration(seconds: 4), () async {
         Navigator.pushReplacement(
@@ -78,7 +77,7 @@ class _SplashScreenState extends State<SplashScreen>
                   animation: _animation,
                   builder: (context, child) {
                     int stretchCount = (_animation.value)
-                        .round(); // adjust divisor to control speed
+                        .round();
                     print(_animation.value);
                     String stretch = 'ـ' * stretchCount;
                     return Text(

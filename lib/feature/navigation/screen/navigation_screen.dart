@@ -1,10 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:glow_bottom_app_bar/glow_bottom_app_bar.dart';
-
 import '../controller/navigation_controller.dart';
 
 class NavigationScreen extends StatefulWidget {
-  //final Function(ThemeMode)? toggleThemeMode;
   const NavigationScreen({super.key});
 
   @override
@@ -15,8 +12,6 @@ class NavigationScreen extends StatefulWidget {
 class _NavigationScreenState extends State<NavigationScreen> {
   NavigationBarController controller = NavigationBarController();
 
-  int index = 0;
-  // final bottomPadding = MediaQuery.of(context).padding.bottom;
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +45,6 @@ class _NavigationScreenState extends State<NavigationScreen> {
                         icon: Image(
                           image: AssetImage("assets/images/image 10.png"),
                         ),
-                        //Icon(Icons.home_outlined, color: Colors.grey.shade700),
                         label: 'حيّك',
                       ),
                       BottomNavigationBarItem(
@@ -80,7 +74,6 @@ class _NavigationScreenState extends State<NavigationScreen> {
                         label: 'سولف',
                       ),
                       BottomNavigationBarItem(
-                        //Group (4)
                         activeIcon: Image(
                           image: AssetImage("assets/images/Group (4).png"),
                         ),
@@ -97,15 +90,6 @@ class _NavigationScreenState extends State<NavigationScreen> {
                         controller.currentIndex = index;
                       });
                     },
-                    //Row(
-                    //   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    //   children: [
-                    //     _buildNavItem('حيّك', 'assets/images/image 10.png', isActive: true),
-                    //     _buildNavItem('اكتشف', 'assets/images/flowbite_search-outline.png'),
-                    //     _buildNavItem('سولف', 'assets/images/fluent_chat-24-regular.png'),
-                    //     _buildNavItem('حسابك', 'assets/images/Group (3).png'),
-                    //   ],
-                    // ),
                   ),
                 ),
               ),
