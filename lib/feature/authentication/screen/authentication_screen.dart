@@ -45,14 +45,14 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
             key: formKey,
             child:
             PhoneFormField(
-                validator: ( value) {
-                 // final String phone = value?.nsn;
-
-                  if (value == null || !value.isValid() ) {
-                   return "الرجاء ادخال رقم الجوال";
-                }
-      return null;
-                  },
+      //           validator: ( value) {
+      //            // final String phone = value?.nsn;
+      //
+      //             if (value == null || !value.isValid() ) {
+      //              return "الرجاء ادخال رقم الجوال";
+      //           }
+      // return null;
+      //             },
                 decoration: InputDecoration(
                   hintText: "XX XXX XXXX",
                   hintStyle: TextStyle(color: Color(0xffB5B5B5)),
@@ -127,15 +127,15 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                 type: "Login",
                 onPressed:
                     () {
-                      if(formKey.currentState?.validate() ?? false)
-                        {
+                      // if(formKey.currentState?.validate() ?? false)
+                      //   {
                         Navigator.pushReplacement(
                           context,
                           MaterialPageRoute<void>(
                             builder: (context) => OTPScreen(),
                           ),
                         );}
-                      }
+                   //   }
                 ,
                 child: Text("استمرار"),
               ),

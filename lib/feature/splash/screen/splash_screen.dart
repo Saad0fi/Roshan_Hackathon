@@ -1,5 +1,8 @@
 
 import 'package:flutter/material.dart';
+import 'package:roshan/feature/onboarding/screen/onboarding_screen.dart';
+
+import '../../landing/screens/landing_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -54,6 +57,16 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
     });
 
     _controller.forward();
+
+
+    WidgetsBinding.instance.addPostFrameCallback((_) {
+      Future.delayed(const Duration(seconds: 4), () async {
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => OnboardingScreen()),
+        );
+      });
+    });
   }
 
   @override

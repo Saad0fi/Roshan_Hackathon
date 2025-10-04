@@ -3,6 +3,8 @@ import 'package:flutter/widgets.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
 import 'package:roshan/feature/common/widget/button_widget.dart';
 import 'package:roshan/feature/common/widget/header.dart';
+import 'package:roshan/feature/home/screen/home_screen.dart';
+import 'package:roshan/feature/navigation/screen/navigation_screen.dart';
 import 'package:roshan/feature/theme/app_color.dart';
 
 class OTPScreen extends StatefulWidget {
@@ -85,10 +87,17 @@ class _OTPScreenState extends State<OTPScreen> {
                   textDirection: TextDirection.rtl,
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 200),
+                SizedBox(height: 150),
                 ButtonWidget(
                   type: 'Login',
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushReplacement(
+                      context,
+                      MaterialPageRoute<void>(
+                        builder: (context) => NavigationScreen(),
+                      ),
+                    );
+                  },
                   child: Text("التحقق"),
                 ),
               ],

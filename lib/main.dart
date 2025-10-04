@@ -66,8 +66,8 @@ class _MainAppState extends State<MainApp> {
       debugShowCheckedModeBanner: false,
       theme: lightTheme,
       darkTheme: darkTheme,
-        home: NavigationScreen(),
-     //   SplashScreen(),
+        home: //NavigationScreen(),
+      SplashScreen(),
     //  home: NavigationScreen(toggleThemeMode: _toggleThemeMode),
      // themeMode: _themeMode,
     );

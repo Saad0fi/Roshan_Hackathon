@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roshan/feature/authentication/screen/authentication_screen.dart';
 import 'package:roshan/feature/common/widget/button_widget.dart';
 import 'package:roshan/feature/theme/app_color.dart';
 
@@ -77,7 +78,14 @@ class LandingPage extends StatelessWidget {
 
                     ButtonWidget(
                       type: "Login",
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute<void>(
+                            builder: (context) => AuthenticationScreen(),
+                          ),
+                        );
+                      },
                       child: Text("تسجيل الدخول"),
                     ),
 

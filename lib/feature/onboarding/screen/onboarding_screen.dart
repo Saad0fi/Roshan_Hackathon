@@ -4,6 +4,7 @@ import '../../authentication/screen/authentication_screen.dart';
 // import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 // import '../../theme/app_color.dart';
 import '../../common/widget/button_widget.dart';
+import '../../landing/screens/landing_page.dart';
 import '../../theme/app_color.dart';
 import '../controller/onboarding_controller.dart';
 
@@ -95,7 +96,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   else{
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute<void>(builder: (context) => AuthenticationScreen())
+                      MaterialPageRoute<void>(builder: (context) => LandingPage())
                     );
                   }}
                   ,
@@ -103,27 +104,6 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                   Text("التالي"):
                   Text("حياك")
                   ),
-              // ElevatedButton(
-              //   //Go to Signup Screen
-              //   onPressed: () {
-              //     if(controllerObj.currentPage != controllerObj.items.length-1)
-              //     {
-              //       controllerObj.controller.nextPage(
-              //           duration:
-              //           Duration(seconds: 1), curve: Curves.linear);
-              //     }
-              //     else{
-              //       Navigator.pushReplacement(
-              //         context,
-              //         MaterialPageRoute<void>(builder: (context) => AuthenticationScreen()),
-              //       );
-              //     }
-              //
-              //   },
-              //   child: controllerObj.currentPage != controllerObj.items.length-1 ?
-              //   Text("التالي"):
-              //   Text("حياك"),
-              // ),
 
                 controllerObj.currentPage != controllerObj.items.length-1 ?
                 TextButton(
@@ -132,7 +112,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
 
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute<void>(builder: (context) => AuthenticationScreen()),
+                      MaterialPageRoute<void>(builder: (context) => LandingPage()),
                     );
 
                 },
