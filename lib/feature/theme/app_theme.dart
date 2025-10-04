@@ -14,10 +14,25 @@ ThemeData lightTheme = ThemeData(
   textTheme: TextTheme(
     titleLarge: TextStyle(fontWeight: FontWeight.w400,fontSize: 44,
     fontFamily: 'Lalezar'),
+    titleSmall:  TextStyle(
+      color: Colors.black,
+      fontSize: 24,
+      fontFamily: 'Josefin Sans',
+      fontWeight: FontWeight.w600,
+      height: 1.67,
+    ),
     bodyLarge: TextStyle(color: Colors.black),
     displayMedium:   TextStyle(fontSize: 30,
         fontWeight: FontWeight.bold,
-    fontFamily: 'NotoSansArabic'),
+    fontFamily: 'NotoSansArabic'
+    ),
+    headlineSmall: TextStyle(
+      color: Colors.black,
+      fontSize: 14,
+    //  fontFamily: 'Josefin Sans',
+      fontWeight: FontWeight.w600,
+      height: 1.57,
+    ),
     bodyMedium: TextStyle(fontSize: 18,height: 2.0, fontWeight: FontWeight.bold ),
     bodySmall: TextStyle(
       color: AppColor.purpleColor,
@@ -25,6 +40,7 @@ ThemeData lightTheme = ThemeData(
       fontWeight: FontWeight.bold,
      // fontFamily: 'JosefinSans',
     ),
+
   ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ElevatedButton.styleFrom(
@@ -35,15 +51,35 @@ ThemeData lightTheme = ThemeData(
       shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
     ),
   ),
+  colorScheme: ColorScheme.fromSeed(seedColor: AppColor.lightGreyColor_03,
+    brightness: Brightness.light, ),
+  //Colors.white.withValues(alpha: 0.20)
+
 );
 
 /// Dark Mode
 ThemeData darkTheme = ThemeData(
   brightness: Brightness.dark,
-  scaffoldBackgroundColor: AppColor.lightBlackColor,
+  scaffoldBackgroundColor: AppColor.fontColorBlack,
+  fontFamily:  'NotoSansArabic',
   appBarTheme: AppBarTheme(
-    backgroundColor: Color(0xff1E1E2C),
+    backgroundColor:  AppColor.fontColorBlack,
     titleTextStyle: TextStyle(color: Colors.black, fontSize: 18),
   ),
-  textTheme: TextTheme(bodyLarge: TextStyle(color: Colors.white)),
+  textTheme: TextTheme(
+      bodyLarge: TextStyle(color: Colors.white),
+    headlineSmall: TextStyle(
+    color: Colors.white,
+    fontSize: 14,
+   // fontFamily: 'Josefin Sans',
+    fontWeight: FontWeight.w600,
+    height: 1.57,
+  ),),
+  colorScheme: ColorScheme.fromSeed(seedColor:
+  Colors.white
+    ,
+    brightness: Brightness.dark,
+  ),
+
+
 );

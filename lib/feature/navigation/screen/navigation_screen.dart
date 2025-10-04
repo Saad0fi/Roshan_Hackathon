@@ -7,6 +7,7 @@ import '../controller/navigation_controller.dart';
 
 
 class NavigationScreen extends StatefulWidget {
+  //final Function(ThemeMode)? toggleThemeMode;
   const NavigationScreen({super.key});
 
   @override
@@ -15,6 +16,7 @@ class NavigationScreen extends StatefulWidget {
 
 /// this class will show Navigation bar*
 class _NavigationScreenState extends State<NavigationScreen> {
+
   NavigationBarController controller = NavigationBarController();
 
   int index = 0;
