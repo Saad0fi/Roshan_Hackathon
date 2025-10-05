@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:roshan/feature/events/screen/participate_screen.dart';
 import 'package:roshan/feature/theme/app_color.dart';
 
 class EventDetailScreen extends StatelessWidget {
@@ -185,53 +186,61 @@ class EventDetailScreen extends StatelessWidget {
                               ],
                             ),
                           ),
-                          Expanded(
-                            child: Row(
-                              children: [
-                                Icon(
-                                  Icons.access_time,
-                                  color: AppColor.greenColor,
-                                  size: 20,
-                                ),
 
-                                Text(
-                                  "8 م - 12 ص",
-                                  style: TextStyle(
-                                    fontSize: 14,
-                                    color: AppColor.blackColor,
-                                    fontWeight: FontWeight.w500,
-                                  ),
+                          Row(
+                            children: [
+                              Icon(
+                                Icons.access_time,
+                                color: AppColor.greenColor,
+                                size: 20,
+                              ),
+
+                              Text(
+                                "8 م - 12 ص",
+                                style: TextStyle(
+                                  fontSize: 14,
+                                  color: AppColor.blackColor,
+                                  fontWeight: FontWeight.w500,
                                 ),
-                              ],
-                            ),
+                              ),
+                            ],
                           ),
                         ],
                       ),
                       SizedBox(height: 30),
 
-                      Container(
-                        width: double.infinity,
-                        height: 55,
-                        decoration: BoxDecoration(
-                          color: AppColor.purpleColor,
-                          borderRadius: BorderRadius.circular(15),
-                          boxShadow: [
-                            BoxShadow(
-                              color: AppColor.purpleColor.withOpacity(0.3),
-                              spreadRadius: 1,
-                              blurRadius: 10,
-                              offset: Offset(0, 3),
-                            ),
-                          ],
-                        ),
-                        child: Center(
-                          child: Text(
-                            "شارك بالفعالية",
-                            style: TextStyle(
-                              color: AppColor.whiteColor,
-                              fontSize: 18,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Almarai',
+                      InkWell( onTap: (){
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute<void>(
+                            builder: (context) => ParticipateScreen(),
+                          ),
+                        );
+                      },
+                        child: Container(
+                          width: double.infinity,
+                          height: 55,
+                          decoration: BoxDecoration(
+                            color: AppColor.purpleColor,
+                            borderRadius: BorderRadius.circular(15),
+                            boxShadow: [
+                              BoxShadow(
+                                color: AppColor.purpleColor.withOpacity(0.3),
+                                spreadRadius: 1,
+                                blurRadius: 10,
+                                offset: Offset(0, 3),
+                              ),
+                            ],
+                          ),
+                          child: Center(
+                            child: Text(
+                              "شارك بالفعالية",
+                              style: TextStyle(
+                                color: AppColor.whiteColor,
+                                fontSize: 18,
+                                fontWeight: FontWeight.bold,
+                                fontFamily: 'Almarai',
+                              ),
                             ),
                           ),
                         ),

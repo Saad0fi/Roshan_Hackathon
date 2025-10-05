@@ -20,6 +20,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        automaticallyImplyLeading: false,
         toolbarHeight: 150,
         flexibleSpace: Image(image: AssetImage("assets/images/image 7.png")),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:roshan/feature/common/widget/header.dart';
+import 'package:roshan/feature/events/screen/event_detail_screen.dart';
 
 class ExploreScreen extends StatefulWidget {
   @override
@@ -169,7 +170,16 @@ class _ExploreScreenState extends State<ExploreScreen>
       ),
       itemCount: images.length,
       itemBuilder: (context, index) {
-        return Image(image: AssetImage(images[index]));
+        return
+          InkWell(onTap: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute<void>(
+                builder: (context) => EventDetailScreen(),
+              ),
+            );
+          },
+              child: Image(image: AssetImage(images[index])));
       },
     );
   }
