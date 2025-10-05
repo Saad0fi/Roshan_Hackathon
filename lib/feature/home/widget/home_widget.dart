@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roshan/feature/events/screen/event_detail_screen.dart';
 
 class HomeWidget extends StatefulWidget {
    HomeWidget({super.key});
@@ -103,11 +104,29 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin{
              scrollDirection: Axis.horizontal,
              child:
              Row(children: [
-               Image(image: AssetImage("assets/images/Frame 1410148735.png")),
+               GestureDetector(
+                 onTap: () {
+                   Navigator.of(context).push(
+                     MaterialPageRoute(
+                       builder: (context) => EventDetailScreen(),
+                     ),
+                   );
+                 },
+                 child: Image(image: AssetImage("assets/images/Frame 1410148735.png")),
+               ),
                SizedBox(width: 5,),
                Image(image: AssetImage("assets/images/Frame 1410148734 (1).png")),
                SizedBox(width: 5,),
-               Image(image: AssetImage("assets/images/Frame 1410148735.png")),
+               GestureDetector(
+                 onTap: () {
+                   Navigator.of(context).push(
+                     MaterialPageRoute(
+                       builder: (context) => EventDetailScreen(),
+                     ),
+                   );
+                 },
+                 child: Image(image: AssetImage("assets/images/Frame 1410148735.png")),
+               ),
              ],),
            ),
            SingleChildScrollView(
@@ -116,7 +135,16 @@ class _HomeWidgetState extends State<HomeWidget> with TickerProviderStateMixin{
              Row(children: [
                Image(image: AssetImage("assets/images/Frame 1410148734 (1).png")),
                SizedBox(width: 5,),
-               Image(image: AssetImage("assets/images/Frame 1410148735.png")),
+               GestureDetector(
+                 onTap: () {
+                   Navigator.of(context).push(
+                     MaterialPageRoute(
+                       builder: (context) => EventDetailScreen(),
+                     ),
+                   );
+                 },
+                 child: Image(image: AssetImage("assets/images/Frame 1410148735.png")),
+               ),
                SizedBox(width: 5,),
                Image(image: AssetImage("assets/images/Frame 1410148734 (1).png")),
              ],),
