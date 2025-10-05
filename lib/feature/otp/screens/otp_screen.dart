@@ -27,14 +27,21 @@ class _OTPScreenState extends State<OTPScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text(
-                  'ادخل رمز التحقق',
-                  style: TextStyle(
-                    color: AppColor.fontColorBlack,
-                    fontSize: 30,
-                    fontWeight: FontWeight.bold,
-                  ),
-                ),
+                Row(spacing: 10,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'ادخل رمز التحقق',
+                      style: TextStyle(
+                        color: AppColor.fontColorBlack,
+                        fontSize: 30,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                    InkWell(onTap: () => Navigator.pop(context),
+                        child: Icon(Icons.arrow_forward_ios)),
+                  ],),
+
 
                 SizedBox(height: 10),
 

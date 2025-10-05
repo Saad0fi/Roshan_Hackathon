@@ -12,6 +12,7 @@ class LeaderboardScreen extends StatelessWidget {
       child: Scaffold(
         backgroundColor: AppColor.lightWhiteColor,
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           backgroundColor: AppColor.lightWhiteColor,
           leading: IconButton(
             icon: Icon(Icons.arrow_back_ios, color: AppColor.blackColor),

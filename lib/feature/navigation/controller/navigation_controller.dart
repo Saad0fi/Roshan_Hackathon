@@ -5,9 +5,6 @@ import '../../chats/screen/chats_screen.dart';
 import '../../home/screen/home_screen.dart';
 
 class NavigationBarController {
-  // final Function(ThemeMode)? toggleThemeMode;
-  //
-  // NavigationBarController({required this.toggleThemeMode});
   int currentIndex = 0;
 
   /// list of screens*
