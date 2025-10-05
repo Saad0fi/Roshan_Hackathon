@@ -27,7 +27,7 @@ class _MoreStoriesState extends State<MoreStories> {
               StoryItem.pageImage(
                 url:
                     //
-                    "https://i.ibb.co/21GTWCWC/a381356eec68d1ce11845bf9aea308489cf1b37b-1.jpg",
+                    "https://i.ibb.co/6ctFnMpG/safeimagekit-a381356eec68d1ce11845bf9aea308489cf1b37b-2.png",
 
                 controller: controller,
               ),
@@ -38,9 +38,7 @@ class _MoreStoriesState extends State<MoreStories> {
                 controller: controller,
               ),
             ],
-            onStoryShow: (storyItem, index) {
-              print("Showing story $index");
-            },
+            onStoryShow: (storyItem, index) {},
             onComplete: () {
               Navigator.of(context).pop();
             },

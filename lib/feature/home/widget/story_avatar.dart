@@ -35,7 +35,7 @@ class StoryAvatarWidget extends StatelessWidget {
                 left: 0,
                 child: CircleAvatar(
                   radius: addRadius,
-                  backgroundImage: AssetImage("assets/images/add_story.png"),
+                  backgroundImage: AssetImage("assets/images/add_story_.png"),
                 ),
               ),
           ],
