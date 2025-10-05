@@ -82,7 +82,6 @@ class _ExploreScreenState extends State<ExploreScreen>
                   ),
                 ),
                 SizedBox(width: 12),
-
                 Container(
                   padding: EdgeInsets.all(8),
                   decoration: BoxDecoration(
@@ -164,7 +163,7 @@ class _ExploreScreenState extends State<ExploreScreen>
       padding: EdgeInsets.all(16),
       gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
         crossAxisCount: 2,
-        childAspectRatio: 1.2,
+        childAspectRatio: 1.0,
         crossAxisSpacing: 4,
         mainAxisSpacing: 12,
       ),

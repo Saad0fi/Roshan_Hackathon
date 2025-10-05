@@ -10,6 +10,7 @@ class ChatsScreen extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
+          automaticallyImplyLeading: false,
           centerTitle: true,
           title: Text("سولف", style: TextTheme.of(context).titleMedium),
           actions: [Icon(Icons.settings)],

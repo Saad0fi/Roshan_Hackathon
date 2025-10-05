@@ -18,7 +18,8 @@ class HomeScreen extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
           appBar: AppBar(
-              surfaceTintColor: Colors.transparent,
+            automaticallyImplyLeading: false,
+            surfaceTintColor: Colors.transparent,
               actionsPadding: EdgeInsets.only(left: 19),
           actions: [
             Container(

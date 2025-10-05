@@ -63,11 +63,6 @@ class _MapScreenState extends State<MapScreen> {
       DefaultTabController(
         length: 3,
         child: Scaffold(
-
-         // appBar: AppBar(leading:
-         //  // Icon(Icons.arrow_back_ios)
-         // Image(image: AssetImage("assets/images/Frame 1410148804.png"))
-         //   ,),
           bottomSheet: Container(
             width: 440,
             height: 100,
