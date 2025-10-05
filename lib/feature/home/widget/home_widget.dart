@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:roshan/feature/events/screen/event_detail_screen.dart';
 
 class HomeWidget extends StatefulWidget {
  const HomeWidget({super.key});
