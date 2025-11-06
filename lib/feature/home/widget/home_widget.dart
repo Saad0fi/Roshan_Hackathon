@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:roshan/feature/events/screen/event_detail_screen.dart';
+import 'package:Hayyak/feature/events/screen/event_detail_screen.dart';
 
 class HomeWidget extends StatefulWidget {
- const HomeWidget({super.key});
+  const HomeWidget({super.key});
 
   @override
   State<HomeWidget> createState() => _HomeWidgetState();

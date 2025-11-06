@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:roshan/feature/authentication/screen/authentication_screen.dart';
-import 'package:roshan/feature/common/widget/button_widget.dart';
-import 'package:roshan/feature/theme/app_color.dart';
+import 'package:Hayyak/feature/authentication/screen/authentication_screen.dart';
+import 'package:Hayyak/feature/common/widget/button_widget.dart';
+import 'package:Hayyak/feature/theme/app_color.dart';
 
 class LandingPage extends StatelessWidget {
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:roshan/feature/onboarding/screen/onboarding_screen.dart';
+import 'package:Hayyak/feature/onboarding/screen/onboarding_screen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -8,7 +8,8 @@ class SplashScreen extends StatefulWidget {
   State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMixin {
+class _SplashScreenState extends State<SplashScreen>
+    with TickerProviderStateMixin {
   late AnimationController _controller, _stretchController;
   late Animation<double> _animation;
   late Animation<Offset> _slideAnimation;
@@ -76,8 +77,7 @@ class _SplashScreenState extends State<SplashScreen> with TickerProviderStateMix
                 child: AnimatedBuilder(
                   animation: _animation,
                   builder: (context, child) {
-                    int stretchCount = (_animation.value)
-                        .round();
+                    int stretchCount = (_animation.value).round();
                     print(_animation.value);
                     String stretch = 'ـ' * stretchCount;
                     return Text(

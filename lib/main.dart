@@ -12,9 +12,11 @@ void main() async {
 
   runApp(
     EasyLocalization(
-      supportedLocales: [Locale('en'), Locale('ar')],
+      supportedLocales: [Locale('ar')],
       path:'assets/translations', // <-- change the path of the translation files
       fallbackLocale: Locale('ar'),
+      startLocale: Locale('ar'),
+      useOnlyLangCode: true,
       child: MainApp(),
     ),
   );

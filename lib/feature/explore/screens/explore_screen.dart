@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:roshan/feature/common/widget/header.dart';
-import 'package:roshan/feature/events/screen/event_detail_screen.dart';
+import 'package:Hayyak/feature/common/widget/header.dart';
+import 'package:Hayyak/feature/events/screen/event_detail_screen.dart';
 
 class ExploreScreen extends StatefulWidget {
   @override
@@ -170,8 +170,8 @@ class _ExploreScreenState extends State<ExploreScreen>
       ),
       itemCount: images.length,
       itemBuilder: (context, index) {
-        return
-          InkWell(onTap: () {
+        return InkWell(
+          onTap: () {
             Navigator.push(
               context,
               MaterialPageRoute<void>(
@@ -179,7 +179,8 @@ class _ExploreScreenState extends State<ExploreScreen>
               ),
             );
           },
-              child: Image(image: AssetImage(images[index])));
+          child: Image(image: AssetImage(images[index])),
+        );
       },
     );
   }

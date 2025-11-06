@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:roshan/feature/theme/app_color.dart';
+import 'package:Hayyak/feature/theme/app_color.dart';
 
 /// Light Mode
 ThemeData lightTheme = ThemeData(

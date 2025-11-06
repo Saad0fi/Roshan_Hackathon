@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:roshan/feature/home/screen/home_screen.dart';
-import 'package:roshan/feature/theme/app_color.dart';
+import 'package:Hayyak/feature/home/screen/home_screen.dart';
+import 'package:Hayyak/feature/theme/app_color.dart';
 
 class LeaderboardScreen extends StatelessWidget {
   const LeaderboardScreen({super.key});

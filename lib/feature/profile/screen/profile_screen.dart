@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:roshan/feature/landing/screens/landing_page.dart';
+import 'package:Hayyak/feature/landing/screens/landing_page.dart';
 import '../../theme/app_color.dart';
 import '../widget/profile_dtl_widget.dart';
 import '../widget/profile_widget.dart';

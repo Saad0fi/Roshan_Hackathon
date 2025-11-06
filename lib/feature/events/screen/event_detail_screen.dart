@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:roshan/feature/events/screen/participate_screen.dart';
-import 'package:roshan/feature/theme/app_color.dart';
+import 'package:Hayyak/feature/events/screen/participate_screen.dart';
+import 'package:Hayyak/feature/theme/app_color.dart';
 
 class EventDetailScreen extends StatelessWidget {
   const EventDetailScreen({super.key});
@@ -16,10 +16,7 @@ class EventDetailScreen extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           leading: IconButton(
-            icon: Icon(
-              Icons.arrow_back_ios,
-              color: AppColor.whiteColor,
-            ),
+            icon: Icon(Icons.arrow_back_ios, color: AppColor.whiteColor),
             onPressed: () {
               Navigator.of(context).pop();
             },
@@ -209,14 +206,15 @@ class EventDetailScreen extends StatelessWidget {
                       ),
                       SizedBox(height: 30),
 
-                      InkWell( onTap: (){
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute<void>(
-                            builder: (context) => ParticipateScreen(),
-                          ),
-                        );
-                      },
+                      InkWell(
+                        onTap: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute<void>(
+                              builder: (context) => ParticipateScreen(),
+                            ),
+                          );
+                        },
                         child: Container(
                           width: double.infinity,
                           height: 55,

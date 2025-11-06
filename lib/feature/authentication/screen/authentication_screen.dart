@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:phone_form_field/phone_form_field.dart';
-import 'package:roshan/feature/theme/app_color.dart';
+import 'package:Hayyak/feature/theme/app_color.dart';
 import '../../common/widget/button_widget.dart';
 import '../../otp/screens/otp_screen.dart';
 
@@ -30,16 +30,20 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
           child: Column(
             children: [
               SizedBox(height: 30),
-              Row(spacing: 10,
+              Row(
+                spacing: 10,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                Text(
-                  "ادخل رقم جوالك",
-                  style: TextTheme.of(context).displayMedium,
-                ),
-                InkWell(onTap: () => Navigator.pop(context),
-                    child: Icon(Icons.arrow_forward_ios)),
-              ],),
+                  Text(
+                    "ادخل رقم جوالك",
+                    style: TextTheme.of(context).displayMedium,
+                  ),
+                  InkWell(
+                    onTap: () => Navigator.pop(context),
+                    child: Icon(Icons.arrow_forward_ios),
+                  ),
+                ],
+              ),
 
               SizedBox(height: 20),
               Text(
@@ -58,7 +62,7 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                     return null;
                   },
                   decoration: InputDecoration(
-                    errorStyle: TextStyle(fontSize: 18,),
+                    errorStyle: TextStyle(fontSize: 18),
                     hintText: "XX XXX XXXX",
                     hintStyle: TextStyle(color: Color(0xffB5B5B5)),
                     filled: true,

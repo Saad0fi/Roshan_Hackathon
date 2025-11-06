@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pin_code_fields/pin_code_fields.dart';
-import 'package:roshan/feature/common/widget/button_widget.dart';
-import 'package:roshan/feature/common/widget/header.dart';
-import 'package:roshan/feature/home/screen/home_screen.dart';
-import 'package:roshan/feature/navigation/screen/navigation_screen.dart';
-import 'package:roshan/feature/theme/app_color.dart';
+import 'package:Hayyak/feature/common/widget/button_widget.dart';
+import 'package:Hayyak/feature/common/widget/header.dart';
+import 'package:Hayyak/feature/home/screen/home_screen.dart';
+import 'package:Hayyak/feature/navigation/screen/navigation_screen.dart';
+import 'package:Hayyak/feature/theme/app_color.dart';
 
 class OTPScreen extends StatefulWidget {
   const OTPScreen({super.key});
@@ -27,7 +27,8 @@ class _OTPScreenState extends State<OTPScreen> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Row(spacing: 10,
+                Row(
+                  spacing: 10,
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Text(
@@ -38,10 +39,12 @@ class _OTPScreenState extends State<OTPScreen> {
                         fontWeight: FontWeight.bold,
                       ),
                     ),
-                    InkWell(onTap: () => Navigator.pop(context),
-                        child: Icon(Icons.arrow_forward_ios)),
-                  ],),
-
+                    InkWell(
+                      onTap: () => Navigator.pop(context),
+                      child: Icon(Icons.arrow_forward_ios),
+                    ),
+                  ],
+                ),
 
                 SizedBox(height: 10),
 

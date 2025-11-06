@@ -1,4 +1,4 @@
-name: roshan
+name: Hayyak
 description: "A new Flutter project."
 publish_to: 'none'
 version: 0.1.0
@@ -25,17 +25,17 @@ dependencies:
 #  shared_preferences: ^2.5.3
 
 dev_dependencies:
+
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  flutter_launcher_icons: ^0.13.1
 
 flutter:
   uses-material-design: true
-
   assets:
     - assets/images/
     - assets/translations/
-
   fonts:
     - family: Almarai
       fonts:
@@ -53,5 +53,9 @@ flutter:
     - family: NotoSansArabic
       fonts:
         - asset: custom_fonts/fonts/NotoSansArabic.ttf
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app/image.png"
 
 # NotoSansArabic-VariableFont_wdth,wght
